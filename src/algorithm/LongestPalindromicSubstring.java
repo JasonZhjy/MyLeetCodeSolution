@@ -1,7 +1,7 @@
 package algorithm;
 
 public class LongestPalindromicSubstring {
-
+    // 有O(n)解法
     public String longestPalindrome(String s) {
         if (null == s || s.length() == 0 || s.length() == 1) {
             return s;
@@ -47,7 +47,7 @@ public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
         LongestPalindromicSubstring test = new LongestPalindromicSubstring();
-        System.out.println(test.longestPalindrome("a"));
+        System.out.println(test.longestPalindrome("bb"));
     }
 
 }
