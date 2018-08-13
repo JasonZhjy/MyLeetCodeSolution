@@ -1,8 +1,8 @@
 package algorithm;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class LetterCombinationsOfAPhoneNumber {
     public List<String> letterCombinations(String digits) {
