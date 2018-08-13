@@ -28,6 +28,7 @@ public class RemoveNthNodeFromEndOfList {
         for (int i = 0; i < n; i++) {
             p = p.next;
         }
+
         return p;
     }
 
@@ -36,10 +37,10 @@ public class RemoveNthNodeFromEndOfList {
         RemoveNthNodeFromEndOfList test = new RemoveNthNodeFromEndOfList();
 
         ListNode head = test.init();
-        sout(head);
+        ListNode.sout(head);
 
         ListNode rs = test.removeNthFromEnd(head, 1);
-        sout(rs);
+        ListNode.sout(rs);
     }
 
     ListNode init() {
@@ -59,14 +60,6 @@ public class RemoveNthNodeFromEndOfList {
 
         return head;
     }
-
-    static void sout(ListNode head) {
-        while (head != null) {
-            System.out.print(head.val + (head.next == null ? "\n" : "->"));
-            head = head.next;
-        }
-    }
-
 }
 
 
