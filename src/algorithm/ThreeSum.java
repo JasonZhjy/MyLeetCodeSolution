@@ -59,10 +59,11 @@ public class ThreeSum {
                     while (left < right && nums[left] == nums[left + 1]) ++left;
                     while (left < right && nums[right] == nums[right - 1]) --right;
                     rs.add(list);
+                    left++;
                 }
             }
             // 移除重复数据
-            while (i < nums.length && nums[i] == nums[i + 1]) ++i;
+            while (i + 1 < nums.length && nums[i] == nums[i + 1]) ++i;
         }
 
         return rs;
@@ -74,7 +75,7 @@ public class ThreeSum {
         int[] nums = {-1, 0, 1, 2, -1, -4};
 //        int[] nums = {0, 0, 0, 0};
 //        int[] nums = {0, -4, -1, -4, -2, -3, 2};
-        List<List<Integer>> rs = test.threeSum(nums);
+        List<List<Integer>> rs = test.threeSum_solution2(nums);
         for (List<Integer> list : rs) {
             System.out.println(Arrays.toString(list.toArray()));
         }
