@@ -1,5 +1,7 @@
 package algorithm;
 
+import common.ListNode;
+
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(-1), p = l1, k = l2;
@@ -43,11 +45,3 @@ public class AddTwoNumbers {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
