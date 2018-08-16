@@ -1,9 +1,6 @@
 package algorithm;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
 
 /**
  * 26. Remove Duplicates from Sorted Array
