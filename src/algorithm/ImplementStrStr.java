@@ -12,7 +12,7 @@ public class ImplementStrStr {
                 if (haystack.charAt(i + j) != needle.charAt(j)) {
                     break;
                 } else if (j == needle.length() - 1) {
-                    idx = i;
+//                    idx = i;
                     return idx;
                 }
             }
