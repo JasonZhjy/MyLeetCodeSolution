@@ -8,7 +8,9 @@ import java.util.PriorityQueue;
 public class MergeKSortedLists {
     //使用归并排序
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists == null || lists.length == 0) return null;
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
 
         return mergeSort(lists, 0, lists.length - 1);
     }
@@ -37,8 +39,12 @@ public class MergeKSortedLists {
             tail = tail.next;
         }
 
-        if (left != null) tail.next = left;
-        if (right != null) tail.next = right;
+        if (left != null) {
+            tail.next = left;
+        }
+        if (right != null) {
+            tail.next = right;
+        }
 
         return head.next;
     }
