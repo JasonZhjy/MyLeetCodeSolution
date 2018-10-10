@@ -12,7 +12,7 @@ import java.util.Optional;
  */
 public class YinHangJia {
 
-    private transient int work = 100;
+    private volatile int work = 100;
 
     private boolean checkSafe(List<Integer> needs) {
         Boolean[] finished = new Boolean[needs.size()];
