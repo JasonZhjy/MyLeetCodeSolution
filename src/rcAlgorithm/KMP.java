@@ -32,9 +32,10 @@ public class KMP {
         int j = -1;
         while (i < s.length()) {
             if (j == -1 || s.charAt(i) == s.charAt(j)) {
-                i++;
-                j++;
-                next[i] = j;
+//                i++;
+//                j++;
+//                next[i] = j;
+                next[i++] = j++;
             } else {
                 j = next[j];
             }
