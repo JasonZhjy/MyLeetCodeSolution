@@ -69,5 +69,6 @@ public class 出栈序列问题 {
         出栈序列问题 test = new 出栈序列问题();
         List<String> rs = test.getAllOutStackList("123");
         rs.forEach(System.out::println);
+        System.out.println(test.isOutStackLink("123", "123"));
     }
 }
