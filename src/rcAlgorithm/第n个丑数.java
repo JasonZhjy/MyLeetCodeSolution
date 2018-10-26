@@ -31,6 +31,7 @@ public class 第n个丑数 {
     }
 
     public static void main (String[] args) {
-
+        第n个丑数 test = new 第n个丑数();
+        System.out.println(test.getNglyNumber(2));
     }
 }
