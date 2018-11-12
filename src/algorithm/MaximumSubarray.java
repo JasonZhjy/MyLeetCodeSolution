@@ -2,7 +2,7 @@ package algorithm;
 
 public class MaximumSubarray {
     //遍历方法 时间复杂度为O(N^2)
-    public int maxSubArray(int[] nums) {
+    public int maxSubArray (int[] nums) {
         int rs = 0, subMax = 0;
         for (int i = 0; i < nums.length; ++i) {
             subMax = 0;
@@ -29,11 +29,11 @@ public class MaximumSubarray {
      * @param nums
      * @return
      */
-    public int maxSubArray_solution2(int[] nums) {
+    public int maxSubArray_solution2 (int[] nums) {
         return maxSubSum(nums, 0, nums.length - 1);
     }
 
-    private int maxSubSum(int[] nums, int left, int right) {
+    private int maxSubSum (int[] nums, int left, int right) {
         if (left == right) {
             return nums[left];
         }
@@ -60,10 +60,11 @@ public class MaximumSubarray {
     /**
      * 动态规划
      * 状态转移方程：sum[i] = max{sum[i-1]+a[i],a[i]}
+     *
      * @param nums
      * @return
      */
-    public int maxSubArray_solution3(int[] nums) {
+    public int maxSubArray_solution3 (int[] nums) {
         int maxVal = Integer.MIN_VALUE, b = 0;
         for (int i = 0; i < nums.length; i++) {
             if (b > 0) {
@@ -77,8 +78,31 @@ public class MaximumSubarray {
         return maxVal;
     }
 
+    /**
+     * DP
+     * 局部最优和全局最优法(局部最优是一定要包含当前元素)
+     * local[i + 1] = max{local[i] + A[i + 1], A[i + 1]}
+     * global[i + 1] = max{global[i], local[i + 1]}
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray_solution4 (int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
 
-    public static void main(String[] args) {
+        int global = nums[0], local = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            local = Math.max(nums[i], local + nums[i]);
+            global = Math.max(global, local);
+        }
+
+        return global;
+    }
+
+
+    public static void main (String[] args) {
         MaximumSubarray test = new MaximumSubarray();
         int[] arr = {-2, 1, -3, -4, -1, -2, 1, -5, -4};
         System.out.println(test.maxSubArray_solution3(arr));
