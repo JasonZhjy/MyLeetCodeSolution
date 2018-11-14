@@ -21,6 +21,20 @@ public class RemoveElement {
         return (int) list.stream().filter(v -> v.intValue() != val).count();
     }
 
+    public int removeElement2(int[] nums, int val) {
+        if (nums == null || nums.length == 0) return 0;
+        int idx = 0, len = nums.length;
+        for (int i = 0; i < len - idx; i++) {
+            if (nums[i] == val) {
+                idx++;
+                nums[i] = nums[len - idx];
+                i--;
+            }
+        }
+
+        return idx;
+    }
+
     public static void main(String[] args) {
         RemoveElement test = new RemoveElement();
         int[] nums = {1, 2, 2, 3};
