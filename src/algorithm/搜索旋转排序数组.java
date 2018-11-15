@@ -1,5 +1,8 @@
 package algorithm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 33. 搜索旋转排序数组
  */
@@ -37,5 +40,7 @@ public class 搜索旋转排序数组 {
         int target = 3;
         搜索旋转排序数组 test = new 搜索旋转排序数组();
         System.out.println(test.search(arr, target));
+
+        List<Integer> list = new ArrayList<>();
     }
 }
