@@ -33,7 +33,7 @@ public class JumpGame2 {
     }
 
     public static void main (String[] args) {
-        int[] nums = {2, 3, 1, 1, 4};
+        int[] nums = {3, 2, 1, 0, 5, 5};
         JumpGame2 test = new JumpGame2();
         System.out.println(test.jump(nums));
     }

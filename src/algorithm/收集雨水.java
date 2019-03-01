@@ -97,4 +97,40 @@ public class 收集雨水 {
 
         return res;
     }
+
+    /**
+     * simple.
+     *
+     * @param height
+     * @return
+     */
+    public int trap4 (int[] height) {
+
+        int maxIdx = 0;
+        for (int i = 0; i < height.length; i++) {
+            if (height[maxIdx] < height[i]) {
+                maxIdx = i;
+            }
+        }
+
+        int sum = 0;
+        int maxLeft = 0, maxRight = height.length - 1;
+        for (int i = 0; i < maxIdx; i++) {
+            if (height[i] > maxLeft) {
+                maxLeft = i;
+            } else {
+                sum += maxLeft - height[i];
+            }
+        }
+
+        for (int i = height.length - 1; i > maxIdx; i--) {
+            if (height[i] > maxRight) {
+                maxRight = i;
+            } else {
+                sum += maxRight - height[i];
+            }
+        }
+
+        return sum;
+    }
 }
