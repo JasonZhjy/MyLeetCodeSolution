@@ -1,4 +1,4 @@
-package 程序员代码面试指南;
+package 程序员代码面试指南.栈和队列;
 
 import java.util.Arrays;
 import java.util.Stack;
