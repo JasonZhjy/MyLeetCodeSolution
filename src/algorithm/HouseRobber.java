@@ -6,7 +6,7 @@ package algorithm;
 public class HouseRobber {
 
     /**
-     * dp[i] = Math.max(dp[i - 2] + arr[i], dp[i - 1]);
+     * dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
      *
      * @param nums
      * @return
