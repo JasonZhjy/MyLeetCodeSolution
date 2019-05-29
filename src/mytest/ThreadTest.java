@@ -9,6 +9,7 @@ public class ThreadTest {
 
 
         int[] as = Arrays.copyOf(arr, 2);
+
         int[] as2 = Arrays.copyOf(arr, 2);
         as2 = Arrays.copyOf(arr, 2);
         as = Arrays.copyOf(arr, 2);
